@@ -1,0 +1,21 @@
+# Arquivos compilados
+/build/
+/dist/
+/build_antigo/
+/dist_antigo/
+/target/
+
+# NetBeans
+/nbproject/private/
+nbbuild/
+nbdist/
+
+# Logs e temporários
+*.log
+*.tmp
+*.bak
+
+# Segredos e configurações locais
+.env
+.env.*
+!.env.example

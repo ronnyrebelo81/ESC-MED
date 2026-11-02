@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ESC-MED</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #F4F8F5;
+            color: #202820;
+        }
+
+        header {
+            background: #00995D;
+            color: white;
+            padding: 25px 5%;
+        }
+
+        main {
+            max-width: 430px;
+            margin: 65px auto;
+            padding: 32px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        h2 { color: #006B42; }
+
+        label {
+            display: block;
+            margin: 18px 0 7px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccd8cf;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .botao {
+            width: 100%;
+            margin-top: 25px;
+            padding: 13px;
+            border: none;
+            border-radius: 5px;
+            background: #00995D;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .botao:hover { background: #006B42; }
+
+        .aviso {
+            color: #526157;
+            font-size: 13px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .mensagem-erro {
+            display: none;
+            padding: 12px;
+            margin: 18px 0;
+            border: 1px solid #e5a5a5;
+            border-radius: 6px;
+            background: #fff0f0;
+            color: #B83232;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>ESC-MED</h1>
+    <p>Sistema de Escala de Plantão Médico</p>
+</header>
+
+<main>
+    <h2>Acessar o sistema</h2>
+
+    <div id="mensagemErro"
+         class="mensagem-erro"
+         role="alert"
+         aria-live="polite">
+    </div>
+
+    <form action="login" method="POST">
+
+        <label for="usuario">Usuário</label>
+        <input type="text" id="usuario"
+               name="usuario" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha"
+               name="senha" required>
+
+        <button class="botao" type="submit">Entrar</button>
+    </form>
+
+    <p class="aviso">
+        Acesso exclusivo para administradores e médicos cadastrados.
+    </p>
+</main>
+
+<script>
+    const parametros = new URLSearchParams(window.location.search);
+    const erro = parametros.get("erro");
+    const mensagem = document.getElementById("mensagemErro");
+
+    if (erro === "credenciais") {
+        mensagem.textContent =
+            "Usuário ou senha inválidos. Verifique seus dados e tente novamente.";
+        mensagem.style.display = "block";
+
+    } else if (erro === "campos") {
+        mensagem.textContent =
+            "Preencha todos os campos para acessar o sistema.";
+        mensagem.style.display = "block";
+
+    } else if (erro === "perfil") {
+        mensagem.textContent =
+            "Perfil de acesso inválido. Entre em contato com o administrador.";
+        mensagem.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
+```

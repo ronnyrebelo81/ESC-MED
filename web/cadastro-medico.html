@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Médicos - EscMed</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #F4F8F5;
+            color: #202820;
+        }
+
+        header {
+            background: #00995D;
+            color: white;
+            padding: 25px 5%;
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+        }
+
+        main {
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        h2 {
+            color: #006B42;
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 16px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccd8cf;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 13px 22px;
+            border: none;
+            border-radius: 5px;
+            background: #00995D;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #006B42;
+        }
+
+        .voltar {
+            display: inline-block;
+            margin-top: 20px;
+            color: #006B42;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Escala de Plantão Médico</h1>
+        <p>Cadastro de profissionais</p>
+    </header>
+
+    <main>
+        <h2>Cadastrar Médico</h2>
+
+        <form action="CadastroMedicoServlet" method="POST">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="crm">CRM</label>
+            <input type="text" id="crm" name="crm" required>
+
+            <label for="especialidade">Especialidade</label>
+            <input type="text" id="especialidade" name="especialidade">
+
+            <label for="usuario">Nome de usuário</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <label for="confirmarSenha">Confirmar senha</label>
+            <input type="password" id="confirmarSenha"
+                   name="confirmarSenha" required>
+
+            <button type="submit">Cadastrar Médico</button>
+        </form>
+
+        <a class="voltar" href="admin.html">← Voltar ao início</a>
+    </main>
+
+</body>
+</html>

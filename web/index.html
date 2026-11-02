@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escala de Plantão Médico</title>
+    <meta http-equiv="refresh" content="0; url=login.html">
+
+    <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #F4F8F5;
+        color: #202820;
+    }
+
+    header {
+        background: #00995D;
+        color: white;
+        padding: 28px 40px;
+        border-bottom: 5px solid #DDF3E7;
+    }
+
+    header h1 {
+        font-size: 26px;
+        margin-bottom: 8px;
+    }
+
+    header p {
+        color: #E5F7EC;
+    }
+
+    main {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .boas-vindas {
+        margin-bottom: 30px;
+    }
+
+    .boas-vindas h2 {
+        margin-bottom: 10px;
+        color: #202820;
+    }
+
+    .boas-vindas p {
+        color: #526157;
+    }
+
+    .modulos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        border: 1px solid #DCE9DF;
+        border-top: 5px solid #00995D;
+        box-shadow: 0 3px 12px rgba(0, 80, 40, 0.07);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 18px rgba(0, 80, 40, 0.12);
+    }
+
+    .card h3 {
+        margin-bottom: 12px;
+        color: #006B42;
+    }
+
+    .card p {
+        color: #526157;
+        line-height: 1.5;
+    }
+
+    .status {
+        display: inline-block;
+        margin-top: 18px;
+        padding: 7px 11px;
+        background: #DDF3E7;
+        color: #006B42;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    footer {
+        text-align: center;
+        padding: 25px;
+        color: #526157;
+        background: #E8F3EB;
+        margin-top: 50px;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Escala de Plantão Médico</h1>
+        <p>Sistema de gerenciamento de profissionais e escalas</p>
+    </header>
+
+    <main>
+        <section class="boas-vindas">
+            <h2>Bem-vindo ao sistema</h2>
+            <p>Gerencie os médicos e organize os plantões de forma simples e centralizada.</p>
+        </section>
+
+        <section class="modulos">
+
+            <div class="card">
+                <h3>Cadastro de Médicos</h3>
+                <p>Gerenciamento dos dados dos profissionais, CRM e especialidades.</p>
+                <span class="status">Módulo em desenvolvimento</span>
+            </div>
+
+            <div class="card">
+                <h3>Plantões</h3>
+                <p>Cadastro e consulta dos períodos de plantão disponíveis.</p>
+                <span class="status">Módulo em desenvolvimento</span>
+            </div>
+
+            <div class="card">
+                <h3>Escalas</h3>
+                <p>Organização e visualização dos médicos escalados.</p>
+                <span class="status">Módulo em desenvolvimento</span>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        Esc-Med - Sistema Escala de Plantão Médico
+    </footer>
+
+</body>
+</html>
